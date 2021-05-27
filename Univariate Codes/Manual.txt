@@ -1,0 +1,6 @@
+1. First source LOOCV_Univ_Faster.cpp
+
+2. Then source NNDP_MCSample.cpp
+
+3. Then source the R files. This loads all the functions.
+
