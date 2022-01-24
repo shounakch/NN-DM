@@ -7,5 +7,9 @@ Author: Shounak Chattopadhyay
 Maintainer: Shounak Chattopadhyay <shounak.chattopadhyay@duke.edu>
 Description: Implements the Nearest Neighbor Dirichlet Mixture pseudo-Bayesian model described in Chattopadhyay et al. (2021+).
 License: What license is it under?
-Imports: Rcpp (>= 1.0.7)
+Imports: 
+Rcpp (>= 1.0.7),
+FNN,
+dplyr,
+plyr
 LinkingTo: Rcpp, RcppArmadillo
