@@ -11,6 +11,12 @@ First install the 'devtools' package. If using Windows, install Rtools from here
 ```
 install.packages("devtools")
 ```
+Before installing the 'NNDM' package, install the following three packages in R:
+
+```
+install.packages(c("FNN", "dplyr", "plyr"))
+```
+
 Now install the package from GitHub:
 
 ```
