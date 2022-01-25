@@ -60,7 +60,7 @@ MC = 1000
 mu0 = rep(0, p)
 nu0 = 0.001
 gamma0 = p
-res = mNNDP(x, MC, k, inputpt, mu0, nu0, gamma0) ## psi0 is chosen by cross validation and alpha is tuned from the data.
+res = mNNDM(x = x, inputpt = inputpt, mu0 = mu0, nu0 = nu0, gamma0 = gamma0) ## psi0 is chosen by cross validation and alpha is tuned from the data.
 fmean = rowMeans(res$f_stor)
 plot(f0, fmean, main ="Accuracy of the estimate", xlab = "True", ylab = "Estimate")
 abline(a=0, b=1)
