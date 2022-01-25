@@ -18,6 +18,12 @@ library(dplyr)
 NNDM_postMean<-function(x, k, inputpt, mu0, nu0, gamma0, psi0)
 {
   
+  ## Load packages ##
+  
+  library(FNN)
+  library(dplyr)
+  library(plyr)
+  
   ## Turn everything into matrix ##
   
   x = as.matrix(x)
