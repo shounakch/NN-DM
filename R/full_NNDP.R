@@ -173,6 +173,12 @@ uNNDM<-function(x,
                 samples = TRUE)
 {
   
+  #### Load packages ####
+  
+  library(FNN)
+  library(dplyr)
+  library(plyr)
+  
   #### Define LOOCV and sampler function ####
   
   univ_LOOCV<-function(x, k, mu0, nu0, phi0seq, gamma0)
@@ -397,6 +403,12 @@ mNNDM<-function(x,
                 alpha = "RR", 
                 samples = TRUE)
 {
+  
+  #### Load packages ####
+  
+  library(FNN)
+  library(dplyr)
+  library(plyr)
   
   #### Define cross validation function ####
   
