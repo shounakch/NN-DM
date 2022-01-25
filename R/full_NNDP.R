@@ -8,10 +8,10 @@
 
 #Load Packages
 
-library(FNN)
+#library(FNN)
 # library(Rcpp)
-library(plyr)
-library(dplyr)
+#library(plyr)
+#library(dplyr)
 
 #Stock NNDP Posterior Mean Code (works for all dimensions)
 
@@ -21,8 +21,8 @@ NNDM_postMean<-function(x, k, inputpt, mu0, nu0, gamma0, psi0)
   ## Load packages ##
   
   library(FNN)
-  library(dplyr)
   library(plyr)
+  library(dplyr)
   
   ## Turn everything into matrix ##
   
@@ -176,8 +176,8 @@ uNNDM<-function(x,
   #### Load packages ####
   
   library(FNN)
-  library(dplyr)
   library(plyr)
+  library(dplyr)
   
   #### Define LOOCV and sampler function ####
   
@@ -407,8 +407,8 @@ mNNDM<-function(x,
   #### Load packages ####
   
   library(FNN)
-  library(dplyr)
   library(plyr)
+  library(dplyr)
   
   #### Define cross validation function ####
   
