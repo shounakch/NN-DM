@@ -16,7 +16,7 @@ NNDM_postMean(x, k, inputpt, mu0, nu0, gamma0, psi0)
   \item{inputpt}{Query points at which density is to be estimated. Is a n_t by p matrix by n_t = number of query points.}
   \item{mu0}{Prior mean of neighborhood mean parameter in each neighborhood.}
   \item{nu0}{Prior variance coefficient of neighborhood mean parameter.}
-  \item{gamma0}{Shape parameter of inverse Gamma prior on neighborhood variance parameter. Must be greater than p-1.}
+  \item{gamma0}{Shape parameter of inverse Wishart prior on neighborhood variance parameter. Must be greater than p-1.}
   \item{psi0}{Scale parameter of inverse Wishart prior on neighborhood variance parameter. Must be positive definite.}
 }
 
