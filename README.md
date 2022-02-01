@@ -4,7 +4,7 @@ There is a rich literature on Bayesian nonparametric methods for unknown densiti
 
 Arxiv: https://arxiv.org/abs/2003.07953
 
-# Install the package (works for Linux, macOS and Windows)
+# Install the package (works for Linux, macOS, and Windows)
 
 First install the 'devtools' package. If using Windows, install Rtools from here: https://cran.r-project.org/bin/windows/Rtools/rtools40.html before installing 'devtools'.
 
