@@ -1,19 +1,4 @@
-# Rcpp::sourceCpp("Faster_LOOCV_Rcpp.cpp")
-# Rcpp::sourceCpp("MCSampleRcpp.cpp")
-# Rcpp::sourceCpp("LOOCV_Univ_Faster.cpp")
-# Rcpp::sourceCpp("NNDP_MCSample.cpp")
-
-##Stock Multivariate NNDP Code
-##Pass cross validated answers into this code
-
-#Load Packages
-
-#library(FNN)
-# library(Rcpp)
-#library(plyr)
-#library(dplyr)
-
-#Stock NNDP Posterior Mean Code (works for all dimensions)
+#### NN-DM Pseudo-Posterior Mean ####
 
 NNDM_postMean<-function(x, k, inputpt, mu0, nu0, gamma0, psi0)
 {
@@ -160,6 +145,7 @@ NNDM_postMean<-function(x, k, inputpt, mu0, nu0, gamma0, psi0)
   
 }
 
+#### Univariate NN-DM ####
 
 uNNDM<-function(x, 
                 MC = 1000, 
@@ -391,6 +377,8 @@ uNNDM<-function(x,
   }
   
 }
+                                  
+#### Multivariate NN-DM ####                                  
 
 mNNDM<-function(x, 
                 MC = 1000, 
