@@ -11,8 +11,6 @@ arma::mat NNDM_pmean(int n, float p, int s, arma::mat mu_vec, Rcpp::List bw_inv,
   
   arma::vec f_hat(s, fill::zeros);
   arma::mat middle_matrix(s, n, fill::zeros);
-  double pi = 3.14159265;
-  double con = -0.5*p;
   
   for(int j=0; j<n; j++){
     
