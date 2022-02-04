@@ -33,6 +33,10 @@ fdraws <- function(n, p, s, MC, wtvec, mu_vec, psi_inv, gamman, nun, inputpt) {
     .Call(`_NNDM_fdraws`, n, p, s, MC, wtvec, mu_vec, psi_inv, gamman, nun, inputpt)
 }
 
+NNDM_pmean <- function(n, p, s, mu_vec, bw_inv, df_n, nun, inputpt) {
+    .Call(`_NNDM_NNDM_pmean`, n, p, s, mu_vec, bw_inv, df_n, nun, inputpt)
+}
+
 random_gamma_univ <- function(a) {
     .Call(`_NNDM_random_gamma_univ`, a)
 }

@@ -130,6 +130,24 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// NNDM_pmean
+arma::mat NNDM_pmean(int n, float p, int s, arma::mat mu_vec, Rcpp::List bw_inv, float df_n, float nun, arma::mat inputpt);
+RcppExport SEXP _NNDM_NNDM_pmean(SEXP nSEXP, SEXP pSEXP, SEXP sSEXP, SEXP mu_vecSEXP, SEXP bw_invSEXP, SEXP df_nSEXP, SEXP nunSEXP, SEXP inputptSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< float >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type s(sSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type mu_vec(mu_vecSEXP);
+    Rcpp::traits::input_parameter< Rcpp::List >::type bw_inv(bw_invSEXP);
+    Rcpp::traits::input_parameter< float >::type df_n(df_nSEXP);
+    Rcpp::traits::input_parameter< float >::type nun(nunSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type inputpt(inputptSEXP);
+    rcpp_result_gen = Rcpp::wrap(NNDM_pmean(n, p, s, mu_vec, bw_inv, df_n, nun, inputpt));
+    return rcpp_result_gen;
+END_RCPP
+}
 // random_gamma_univ
 double random_gamma_univ(float a);
 RcppExport SEXP _NNDM_random_gamma_univ(SEXP aSEXP) {
@@ -170,6 +188,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_NNDM_random_gaussian", (DL_FUNC) &_NNDM_random_gaussian, 1},
     {"_NNDM_set_seed", (DL_FUNC) &_NNDM_set_seed, 1},
     {"_NNDM_fdraws", (DL_FUNC) &_NNDM_fdraws, 10},
+    {"_NNDM_NNDM_pmean", (DL_FUNC) &_NNDM_NNDM_pmean, 8},
     {"_NNDM_random_gamma_univ", (DL_FUNC) &_NNDM_random_gamma_univ, 1},
     {"_NNDM_fdraws_univ", (DL_FUNC) &_NNDM_fdraws_univ, 9},
     {NULL, NULL, 0}
