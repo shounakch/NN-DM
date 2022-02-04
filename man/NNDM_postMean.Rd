@@ -25,7 +25,7 @@ NNDM_postMean(x, k, inputpt, mu0, nu0, gamma0, psi0)
 }
 
 \value{
-  \item{f_hat}{n_t by 1 vector containing the pseudo-posterior mean of fitted density estimate samples at each query point. Not returned if samples=TRUE.}
+  \item{f_hat}{n_t by 1 vector containing the pseudo-posterior mean of fitted density estimate samples at each query point.}
   \item{k}{Returns the choice of the number of nearest neighbors provided.}
   \item{n}{Returns the number of training samples used.}
   \item{inputpt}{Returns the matrix of query points at which density estimation is performed.}
