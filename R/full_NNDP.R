@@ -105,30 +105,35 @@ NNDM_postMean<-function(x, k, inputpt, mu0, nu0, gamma0, psi0)
   
   bw_array = ((nu_n + 1) / (nu_n * (gamma_n - p + 1))) * psi
   bw_inv_array = (nu_n * (gamma_n - p + 1) / (nu_n + 1)) * psi_inv
+  bw_inv_list = lapply(psi_inv_list, "*", (nu_n * (gamma_n - p + 1) / (nu_n + 1)))
+  bw_inv_list = lapply(bw_inv_list, as.matrix)
   
   df_n = gamma_n - p + 1
   
-  middle_matrix = matrix(0, nrow = s, ncol = n)
+  # middle_matrix = matrix(0, nrow = s, ncol = n)
+  # 
+  # for(j in 1:n)
+  # {
+  #   
+  #   K_j = bw_inv_array[,,j]
+  #   det_Kj = ifelse(p == 1, K_j, det(K_j))
+  #   mu_j = mu_vec[j,]
+  #   
+  #   for(i in 1:s)
+  #   {
+  #     
+  #     qf_ij = as.numeric(t(inputpt[i,] - mu_j) %*% K_j %*% (inputpt[i,] - mu_j))
+  #     
+  #     dens_ij = (det_Kj^(0.5)) * ((1 + (qf_ij / df_n))^(-0.5*(df_n + p)))
+  #     
+  #     middle_matrix[i,j] = dens_ij
+  #     
+  #   }
+  #   
+  # }
   
-  for(j in 1:n)
-  {
-    
-    K_j = bw_inv_array[,,j]
-    det_Kj = ifelse(p == 1, K_j, det(K_j))
-    mu_j = mu_vec[j,]
-    
-    for(i in 1:s)
-    {
-      
-      qf_ij = as.numeric(t(inputpt[i,] - mu_j) %*% K_j %*% (inputpt[i,] - mu_j))
-      
-      dens_ij = (det_Kj^(0.5)) * ((1 + (qf_ij / df_n))^(-0.5*(df_n + p)))
-      
-      middle_matrix[i,j] = dens_ij
-      
-    }
-    
-  }
+  middle_matrix = NNDM_pmean(n, p, s, mu_vec, bw_inv_list, 
+                             df_n, nu_n, inputpt)
   
   norm_const = gamma(0.5*(df_n + p)) / (((df_n * pi)^(0.5*p)) * gamma(0.5*df_n))
   
