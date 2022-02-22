@@ -34,7 +34,7 @@ NNDM_postMean(x, k, inputpt, mu0, nu0, gamma0, psi0)
 }
 
 \references{
-  Chattopadhyay, Shounak, Antik Chakraborty, and David B. Dunson. "Nearest neighbor Dirichlet process." arXiv preprint arXiv:2003.07953 (2020).
+  Chattopadhyay, S., Chakraborty, A., & Dunson, D. B. (2020). Nearest Neighbor Dirichlet Mixtures. arXiv preprint arXiv:2003.07953.
 }
 
 \author{Shounak Chattopadhyay}
