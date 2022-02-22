@@ -41,7 +41,8 @@ mNNDM(x, MC = 1000, k = 10, inputpt, mu0, nu0, gamma0, psi0 = "CV", alpha = "RR"
 }
 
 \references{
-  Chattopadhyay, Shounak, Antik Chakraborty, and David B. Dunson. "Nearest neighbor Dirichlet process." arXiv preprint arXiv:2003.07953 (2020).
+  Chattopadhyay, S., Chakraborty, A., & Dunson, D. B. (2020). Nearest Neighbor Dirichlet Mixtures. arXiv preprint arXiv:2003.07953.
+  
   Rivoirard, Vincent, and Judith Rousseau. "Bernstein–von Mises theorem for linear functionals of the density." The Annals of Statistics 40.3 (2012): 1489-1523.
 }
 
