@@ -24,7 +24,7 @@ NNDM_postMean: Provides pseudo-posterior mean of the estimator without performin
 Maintainer: \packageMaintainer{NNDM}
 }
 \references{
-Chattopadhyay, Shounak, Antik Chakraborty, and David B. Dunson. "Nearest neighbor Dirichlet process." arXiv preprint arXiv:2003.07953 (2020).
+Chattopadhyay, S., Chakraborty, A., & Dunson, D. B. (2020). Nearest Neighbor Dirichlet Mixtures. arXiv preprint arXiv:2003.07953.
 }
 ~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
 ~~ the R documentation directory ~~
