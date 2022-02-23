@@ -23,11 +23,11 @@ Now install the package from GitHub:
 library(devtools)
 devtools::install_github("shounakchattopadhyay/NN-DM")
 ```
-## Using the package
+# Using the package
 
 The package has two core functions: 'uNNDM' for univariate density estimation and 'mNNDM' for multivariate density estimation. By default, both the functions carry out cross-validation to choose the neighborhood bandwidth matrix hyperparameter, and then proceeds to perform Monte Carlo sampling. One can obtain the pseudo-posterior mean directly without performing Monte Carlo sampling by setting 'samples=FALSE' in the function. Examples are given below.
 
-# Univariate Example
+## Univariate Example
 
 Here we consider data generated from N(0,1). 
 
@@ -47,7 +47,7 @@ lines(inputpt, f0, col = "red")
 
 ```
 
-# Multivariate Example
+## Multivariate Example
 
 Here we consider data from the bivariate standard Gaussian density.
 ```
@@ -72,7 +72,7 @@ fmean = rowMeans(res$f_stor)
 plot(f0, fmean, main ="Accuracy of the estimate", xlab = "True", ylab = "Estimate")
 abline(a=0, b=1)
 ```
-# Pseudo-Posterior Mean
+## Pseudo-Posterior Mean
 
 The function 'NNDM_postMean' obtains the pseudo-posterior mean without carrying out Monte Carlo sampling. All the hyperparameters must be supplied to this function.
 
