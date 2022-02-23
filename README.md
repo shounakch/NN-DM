@@ -23,3 +23,71 @@ Now install the package from GitHub:
 library(devtools)
 devtools::install_github("shounakchattopadhyay/NN-DM")
 ```
+## Using the package
+
+The package has two core functions: 'uNNDM' for univariate density estimation and 'mNNDM' for multivariate density estimation. By default, both the functions carry out cross-validation to choose the neighborhood bandwidth matrix hyperparameter, and then proceeds to perform Monte Carlo sampling. One can obtain the pseudo-posterior mean directly without performing Monte Carlo sampling by setting 'samples=FALSE' in the function. Examples are given below.
+
+# Univariate Example
+
+Here we consider data generated from N(0,1). 
+
+```
+### Univariate Example ###
+
+library(NNDM)
+
+n = 500
+x = rnorm(n)
+inputpt = seq(-4, 4, by = 0.01)
+f0 = dnorm(inputpt)
+res = uNNDM(x = x, inputpt = inputpt) ## phi0sq is chosen by cross validation and alpha is tuned from the data.
+fmean = rowMeans(res$f_stor)
+plot(inputpt, fmean, type = "l", ylim = c(0, 0.5), main= "Black:Pseudo-posterior mean, Red: True")
+lines(inputpt, f0, col = "red")
+
+```
+
+# Multivariate Example
+
+Here we consider data from the bivariate standard Gaussian density.
+```
+### Multivariate Example ###
+
+library(mvtnorm)
+library(NNDM)
+
+n = 500
+p = 2
+n_t = 200
+x = rmvnorm(n, sigma = diag(p))
+inputpt = rmvnorm(n_t, sigma = diag(p))
+f0 = dmvnorm(inputpt, sigma = diag(p))
+k = 10
+MC = 1000
+mu0 = rep(0, p)
+nu0 = 0.001
+gamma0 = p
+res = mNNDM(x = x, inputpt = inputpt, mu0 = mu0, nu0 = nu0, gamma0 = gamma0) ## psi0 is chosen by cross validation and alpha is tuned from the data.
+fmean = rowMeans(res$f_stor)
+plot(f0, fmean, main ="Accuracy of the estimate", xlab = "True", ylab = "Estimate")
+abline(a=0, b=1)
+```
+# Pseudo-Posterior Mean
+
+The function 'NNDM_postMean' obtains the pseudo-posterior mean without carrying out Monte Carlo sampling. All the hyperparameters must be supplied to this function.
+
+```
+x = cbind(rnorm(200), rnorm(200))
+k = 10
+inputpt = cbind(rnorm(500), rnorm(500))
+f0 = dnorm(inputpt[,1])*dnorm(inputpt[,2])
+mu0 = rep(0,dim(x)[2])
+nu0 = 0.001
+gamma0 = dim(x)[2]
+delta0sq = 1
+psi0 = ((gamma0-dim(x)[2]+1) * delta0sq) * diag(dim(x)[2])
+
+f_hat = NNDM_postMean(x, k, inputpt, mu0, nu0, gamma0, psi0)
+```
+
+
