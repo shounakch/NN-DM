@@ -42,7 +42,7 @@ inputpt = seq(-4, 4, by = 0.01)
 f0 = dnorm(inputpt)
 res = uNNDM(x = x, inputpt = inputpt) ## phi0sq is chosen by cross validation and alpha is tuned from the data.
 fmean = rowMeans(res$f_stor)
-plot(inputpt, fmean, type = "l", ylim = c(0, 0.5), main= "Black:Pseudo-posterior mean, Red: True")
+plot(inputpt, fmean, type = "l", ylim = c(0, 0.5), main= "Black: Pseudo-posterior mean, Red: True")
 lines(inputpt, f0, col = "red")
 
 ```
@@ -69,7 +69,7 @@ nu0 = 0.001
 gamma0 = p
 res = mNNDM(x = x, inputpt = inputpt, mu0 = mu0, nu0 = nu0, gamma0 = gamma0) ## psi0 is chosen by cross validation and alpha is tuned from the data.
 fmean = rowMeans(res$f_stor)
-plot(f0, fmean, main ="Accuracy of the estimate", xlab = "True", ylab = "Estimate")
+plot(f0, fmean, main = "Accuracy of the estimate", xlab = "True", ylab = "Estimate")
 abline(a=0, b=1)
 ```
 ## Pseudo-Posterior Mean
