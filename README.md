@@ -25,7 +25,7 @@ devtools::install_github("shounakchattopadhyay/NN-DM")
 ```
 # Using the package
 
-The package has two core functions: 'uNNDM' for univariate density estimation and 'mNNDM' for multivariate density estimation. By default, both the functions carry out cross-validation to choose the neighborhood bandwidth matrix hyperparameter, and then proceeds to perform Monte Carlo sampling. One can obtain the pseudo-posterior mean directly without performing Monte Carlo sampling by setting 'samples=FALSE' in the function. Examples are given below.
+The package has two core functions: 'uNNDM' for univariate density estimation and 'mNNDM' for multivariate density estimation. By default, both the functions carry out cross-validation to choose the neighborhood bandwidth matrix hyperparameter, and then proceed to perform Monte Carlo sampling. One can obtain the pseudo-posterior mean directly without performing Monte Carlo sampling by setting 'samples=FALSE' in either function. Examples are given below.
 
 ## Univariate Example
 
