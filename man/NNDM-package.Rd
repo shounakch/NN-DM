@@ -30,9 +30,9 @@ Chattopadhyay, S., Chakraborty, A., & Dunson, D. B. (2020). Nearest Neighbor Dir
 ~~ the R documentation directory ~~
 \keyword{ package }
 \seealso{
-\code{\link[<pkg>:<pkg>-package]{uNNDM}}
-\code{\link[<pkg>:<pkg>-package]{mNNDM}}
-\code{\link[<pkg>:<pkg>-package]{NNDM_postMean}}
+\code{\link{uNNDM}}
+\code{\link{mNNDM}}
+\code{\link{NNDM_postMean}}
 }
 \examples{
 ### Univariate ###
