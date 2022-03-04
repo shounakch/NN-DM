@@ -6,7 +6,7 @@ Arxiv: https://arxiv.org/abs/2003.07953
 
 # Install the package (works for Linux, macOS, and Windows)
 
-First install the 'devtools' package. If using Windows, install Rtools from here: https://cran.r-project.org/bin/windows/Rtools/rtools40.html before installing 'devtools'. If using macOS, install gfortran and Xcode from here: https://mac.r-project.org/tools/.
+First install the 'devtools' package. If using Windows, install Rtools from here: https://cran.r-project.org/bin/windows/Rtools/rtools40.html before installing 'devtools'. If using macOS, install gfortran from here (if not already installed): https://mac.r-project.org/tools/.
 
 ```
 install.packages("devtools")
