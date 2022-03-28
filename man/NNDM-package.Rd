@@ -37,7 +37,7 @@ Chattopadhyay, S., Chakraborty, A., & Dunson, D. B. (2020). Nearest Neighbor Dir
 \examples{
 ### Univariate ###
 
-  n = 500
+n = 500
 x = rnorm(n)
 inputpt = seq(-4, 4, by = 0.01)
 f0 = dnorm(inputpt)
