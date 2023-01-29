@@ -467,7 +467,7 @@ mNNDM<-function(x,
       ind1 = sample(N, cutoff, replace = FALSE)
       dat = x[ind1,]
       knew = ceiling((k/N)*cutoff)
-      return(mult.LOOCV(dat, knew, mu0, nu0, phi0seq, gamma0))
+      return(mult.LOOCV(dat, knew, mu0, nu0, phi0seq, gamma0, cutoff))
     }
     
   }
