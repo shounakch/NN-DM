@@ -4,7 +4,7 @@ There is a rich literature on Bayesian methods for density estimation, which cha
 
 Arxiv: https://arxiv.org/abs/2003.07953
 
-# Install the package (works for Linux, macOS, and Windows)
+# Install the package 
 
 First install the 'devtools' package. If using Windows, install Rtools from here: https://cran.r-project.org/bin/windows/Rtools/rtools40.html before installing 'devtools'. If using macOS, install gfortran from here (if not already installed): https://mac.r-project.org/tools/.
 
